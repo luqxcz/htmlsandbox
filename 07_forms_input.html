@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forms & Input</title>
+</head>
+<body>
+  <form action="process.php"> 
+    <!-- Text -->
+    <div>
+      <label for="name">Name</label><br>
+      <input type="text" id="name" name="name" value="John Doe">  <!-- put id=name to highlight the form when you clivk on name,
+         id(name) should match the for(name) and finally the name attribute is for used on the server side,
+         to prefill a value, add a value attribute-->
+    </div>
+    <!-- Email -->
+    <div>
+      <label for="email">Email</label><br>
+      <input type="email" name="email" id="email" placeholder="Enter your email"> <!--use placeholder to show somethign that disappear when you write-->
+    </div>
+    <!-- Textarea -->
+    <div>
+      <label for="message">Message</label><br> 
+       <!--This text area is for message because it's bigger -->
+      <textarea name="message" id="message" cols="50" rows="5"></textarea>
+    </div>
+    <!-- Select -->
+    <div>
+      <label for="for">Sex</label><br>
+      <select name="sex" id="sex">
+      <option value="male">Male</option>
+      <option value="female" selected>Female</option> <!--Use selected(for select) to select Female-->
+      <option value="female">Other</option>
+    </select>
+    </div>
+    <!--Number  -->
+    <div>
+      <label for="age">Age</label><br>
+      <input type="number" name="age" id="age">
+    </div>
+    <!-- Date -->
+    <div>
+      <label for="birthday">Birthday</label><br>
+      <input type="date" name="birthdate" id="birthdate">
+    </div>
+    <!-- Radio -->
+    <div>
+      <label for="membership">Membership</label>
+      <input type="radio" name="membership" value="simple" id="membership"> Simple
+      <input type="radio" name="membership" value="standard" id="membership" checked> Standard <!--put checked to automatically select Standard-->
+      <input type="radio" name="membership" value="super" id="membership"> Super
+    </div>
+
+    <!-- Checkbox -->
+    <div>
+      <label for="membership">I like</label>
+      <input type="checkbox" name="likes" value="bike" id="likes"> Bike
+      <input type="checkbox" name="likes" value="car" id="likes" > Car <!--put checked to automatically select Standard-->
+      <input type="checkbox" name="likes" value="Boat" id="likes"> Boat
+    </div>
+    <!-- Input Submit -->
+    <input type="submit" value="Submit">
+    <!-- Button tag -->
+    <button type="submit">Submit</button>
+
+    <!-- Reset button to clear all values in the form except John doe because it's hard coded -->
+    <button type="reset">Reset</button>
+  </form>
+</body>
+</html>
